@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
   end
   
   def new
-    @providers = [:developer, :twitter]
+    @providers = [:developer, :twitter, :google]
   end
 
   protected
