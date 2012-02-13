@@ -14,7 +14,11 @@ class SessionsController < ApplicationController
   end
   
   def new
-    @providers = [:developer, :twitter, :google, :github]
+    @providers = [:twitter, :google, :github]
+    
+    if Rails.env != 'production'
+      @providers << :developer
+    end
   end
 
   protected
