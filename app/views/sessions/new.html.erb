@@ -1,0 +1,7 @@
+<p><strong>You can sign in using:</strong></p>
+<% for provider in @providers %>
+	<a href='/auth/<%=provider.to_s %>'>
+		<%= image_tag "#{provider}_256.png", :size => "32x32" %>
+	</a>
+<% end %>
+

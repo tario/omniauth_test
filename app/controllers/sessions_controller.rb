@@ -12,6 +12,10 @@ class SessionsController < ApplicationController
   
     render :text => "Welcome, #{current_user.name}."
   end
+  
+  def new
+    @providers = [:developer, :twitter]
+  end
 
   protected
 
