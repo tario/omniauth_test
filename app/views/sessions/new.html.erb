@@ -1,7 +1,13 @@
 <p><strong>You can sign in using:</strong></p>
+<table style='width: 400px'>
 <% for provider in @providers %>
-	<a href='/auth/<%=provider.to_s %>'>
-		<%= image_tag "#{provider}_256.png", :size => "32x32" %>
-	</a>
+ 	<td>
+ 		<div style='width: 100px; text-align: center; border-color: black; border-width: 10; border-style: dotted; '>
+		<a href='/auth/<%=provider.to_s %>'>
+				<%= image_tag "#{provider}_256.png", :size => "32x32" %><br/>
+		  	 	<%= provider.to_s %>
+		</a>
+		</div>
+	</td>
 <% end %>
-
+</table>
